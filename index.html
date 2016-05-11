@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head> 
+
+    <meta charset="utf-8">
+    <title>Senators</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="animate.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  width: 90%;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 25px auto 0 auto;
+  color: white;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica;
+  width: 90%;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 25px auto 0 auto;
+  background: rgb(234, 235, 235);
+}
+
+div, p {
+  margin: 0 auto;
+}
+
+
+div,h1 {
+  width: 50%;
+}
+
+.blast {
+  /*display: inline-block;*/
+  color: black;
+  opacity: 0;
+}
+
+.blast:nth-child(odd) {
+  color: purple;
+}
+
+body{
+   background-color: #2E2E2E; }
+
+
+</style>
+
+    </head>
+
+    <body>
+        <h1> Hillary Clinton </h1>
+        <br>
+        <div >
+            I'm not saying that her voice bothers me but think of the voters! She looks 92 years old! Its going to scare away a lot of independent voters.  When I hear Hillary Clinton I hear take out the garbage! When she raises her voice, every husband in America has heard it one time or another.  That look like everybodys first wife standing outside of probate court. The reason shes a candidate for president is her husband messed around.  When she comes on television I involuntarily cross my legs. She isn't likeable. Why is she screaming at me? Iron my shirt! How do we beat the bitch? Will Americans want to watch a woman get older before their eyes on a daily basis? She’s a powerful political robot with little if any character.
+            </div>
+
+        <h1> Kirsten Gillibrand </h1>
+        <br>
+        <div>You know, Kirsten, you’re even pretty when you’re fat. Good thing you’re working out, because you wouldn’t want to get porky. Honey Badger. Many senators are known for many things ...We in the Senate refer to Senator Gillibrand as the hottest member. Don’t lose too much weight now, I like my girls chubby. You need to be beautiful again to win a statewide race. I think Kirsten Gillibrand is an attractive woman. I think she's bright, and I think she's probably a good mom herself.</div>
+
+        <h1> Nancy Pelosi </h1>
+        <br>
+        <div>
+            Aren't you getting a little old? Shouldn't you step aside? Did you see Nancy Pelosi on the floor. Complete disgust. If you can get through all the surgeries, there’s disgust. See how many times that question is asked of a woman, and how many times that question is never asked of Mitch McConnell. Republicans win and Boehner is on the front of Time magazine. Mitch McConnell wins and he is on the front of Time magazine. I was never on the cover of Time magazine, even though I was the first woman to be speaker. Your decision to stay on prohibits the party from having a younger leadership and hurts the party in the long term.
+        </div>
+            
+           
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+            </script>
+            <script src="jquery.blast.js"</script>
+
+            <script src="velocity.js"</script>
+            <script src="velocity.min.js"</script>
+            <script src="velocity.ui.js"</script>
+            <script src="velocity.ui.min.js"</script>
+           
+           
+    </script>
+
+    <script type="text/javascript">
+    setInterval(main,40000);
+  function main(){
+    var blasted = $("div").blast({delimiter:"word"});
+    // var wordsi = $("div").blast({delimiter:"word"});
+    $('h1').velocity({opacity:100});
+      blasted.velocity("transition.fadeIn", { 
+          display: null,
+          duration: 15000,
+          stagger: 40,
+          delay: 500
+      });
+
+      var colors = ['#0CB79A', '#02C0E8', '#02C0E8', '#0D84FF', '#00BFFF'];
+      // var size = [ '25px', '17px', '17px', '17px', '17px'];
+      blasted.each(function() {
+       $(this).css('color', colors[rand(0,colors.length-1)]);
+       $(this).velocity({
+          opacity:rand(0,1), 
+          loop:true,
+          duration: 400});
+       // $(this).css('fontSize', size[rand(0,size.length-1)]);
+       // $('h1').delay(15000).velocity({opacity:0});
+      });   
+
+   }
+
+ 
+   
+   function rand(min, max) {
+        return parseInt(Math.round(min + Math.random() * (max - min)));
+    }
+ 
+
+ </script>
+
+
+
+</body>
+</html>
