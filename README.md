@@ -5,4 +5,4 @@ All the comments shown are actual quotes from news stories and media outlets. Th
 
 ![GMgif](https://github.com/rinaschiller/Generative-Misogyny/blob/master/GenerativeMisogyny.gif)
 
-
+To view this live, download the repo and load the index.html page into any browser.
